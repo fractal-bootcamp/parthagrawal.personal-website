@@ -1,13 +1,11 @@
 import { ReactElement, ReactNode, useState } from "react"
 import { Header } from "~/components/header"
 import { PrismaClient } from "@prisma/client"
-import { Project } from "@prisma/client"
 
 const prisma = new PrismaClient()
 
 const projects: Project[] = [
     {
-        id: 0o1,
         title: "Salami Game",
         picture: "salamigame.png",
         description: "Definitely just a game about dropping salami on a guy's head",
@@ -15,7 +13,6 @@ const projects: Project[] = [
 
     },
     {
-        id: 0o2,
         title: "Lilypads are solar panels",
         picture: "lilypads.png",
         description: "explorations in nature and cybernetics",
