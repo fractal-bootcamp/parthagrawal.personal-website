@@ -1,4 +1,5 @@
 import { ReactElement, ReactNode, useState } from "react"
+import { Header } from "~/components/header"
 
 
 const pictures = ["salamigame.png", "lilypads.png", "exojoint.png"]
@@ -56,8 +57,10 @@ export default function Portfolio() {
 
     return (
 
+
+
         <div>
-            <h1 className="text-3xl font-bold">Portfolio</h1>
+            <Header />
 
 
             <div className="flex justify-center w-screen">
