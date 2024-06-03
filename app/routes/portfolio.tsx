@@ -2,6 +2,7 @@ import { ReactElement, ReactNode, useState } from "react"
 import { Header } from "~/components/header"
 
 
+
 const pictures = ["salamigame.png", "lilypads.png", "exojoint.png"]
 
 export function prevIndex(index: number, length: number) {
@@ -13,19 +14,13 @@ export function prevIndex(index: number, length: number) {
 export function nextIndex(index: number, length: number) {
     return (index + 1) % length
 }
-// prevIndex(index, length) ==> (index - 1) % length
-// nextIndex(index, length) ==> (index + 1) % length
+
 
 interface CarouselItemProps {
     index: number,
     carouselLength: number,
     picture: string
 }
-
-function myNamedFunction() {
-    return "foo"
-}
-
 
 const CarouselItem = ({ index, carouselLength, picture }: CarouselItemProps): ReactElement => {
 
