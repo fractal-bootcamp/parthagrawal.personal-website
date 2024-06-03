@@ -1,3 +1,15 @@
+const CarouselCard = ({ source, currentIndex, prevIndex, nextIndex }: {source: string, currentIndex: number, prevIndex: number, nextIndex: number}) => {
+
+    return (<div id={'#slide' + currentIndex} className="carousel-item w-full">
+        <img src={source} className="carousel-item absolute h-full w-full" />
+        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href={'#slide' + prevIndex} className="btn btn-circle">❮</a>
+            <a href={'#slide' + nextIndex} className="btn btn-circle">❯</a>
+        </div>
+    </div>)
+
+}
+
 export default function Portfolio() {
 
     return (
@@ -11,34 +23,10 @@ export default function Portfolio() {
                 <li> <a href="https://mmm.page/parth_agrawal.applied_cybernetics" className="underline">Lilypads are solar panels</a></li>
             </ul>
             <div className="carousel w-full">
-                <div id="slide1" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide4" className="btn btn-circle">❮</a>
-                        <a href="#slide2" className="btn btn-circle">❯</a>
-                    </div>
-                </div>
-                <div id="slide2" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide1" className="btn btn-circle">❮</a>
-                        <a href="#slide3" className="btn btn-circle">❯</a>
-                    </div>
-                </div>
-                <div id="slide3" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide2" className="btn btn-circle">❮</a>
-                        <a href="#slide4" className="btn btn-circle">❯</a>
-                    </div>
-                </div>
-                <div id="slide4" className="carousel-item relative w-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide3" className="btn btn-circle">❮</a>
-                        <a href="#slide1" className="btn btn-circle">❯</a>
-                    </div>
-                </div>
+                <CarouselCard source = {"salamigame.png"} currentIndex = {1} prevIndex = {3} nextIndex = {2}/>
+                <CarouselCard source = {"lilypads.png"} currentIndex = {2} prevIndex = {1} nextIndex = {3}/>
+                <CarouselCard source = {"exojoint.png"} currentIndex = {3} prevIndex = {2} nextIndex = {1}/>
+
             </div>
         </div>
     )
