@@ -5,6 +5,7 @@ import { Scroll } from "~/components/scroll";
 import { motion, useScroll } from "framer-motion"
 import App from "~/root";
 import { MyComponent } from "~/components/framer";
+import { Toy } from "~/components/toy";
 
 
 export const meta: MetaFunction = () => {
@@ -42,6 +43,7 @@ export default function Index() {
     <div className="p-10 g-3" style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
 
       <Scroll />
+      <Toy />
       <Header />
 
       <About />
