@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+
+    --blue: #0055ff;
+    --red: #ff0055;
+
+
+}
 
 .progress-bar {
     position: fixed;

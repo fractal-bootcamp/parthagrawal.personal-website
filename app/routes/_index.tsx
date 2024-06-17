@@ -1,5 +1,10 @@
 import type { MetaFunction } from "@remix-run/node";
+import About from "~/components/about";
 import { Header } from "~/components/header";
+import { Scroll } from "~/components/scroll";
+import { motion, useScroll } from "framer-motion"
+import App from "~/root";
+import { MyComponent } from "~/components/framer";
 
 
 export const meta: MetaFunction = () => {
@@ -32,10 +37,14 @@ export const meta: MetaFunction = () => {
 //   </header>
 // )
 export default function Index() {
-  return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
 
+  return (
+    <div className="p-10 g-3" style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+
+      <Scroll />
       <Header />
+
+      <About />
 
 
     </div>

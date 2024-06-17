@@ -19,6 +19,12 @@ const projects: Project[] = [
         link: "https://mmm.page/parth-agrawal/applied-cybernetics"
 
     },
+    {
+        title: "Assistive device for stroke patients",
+        picture: 'exojoint.png',
+        description: 'A robotic exoskeletal arm that helps patients move by sensing muscular movements and augmenting them with a motor',
+        link: "https://www.youtube.com/watch?v=MMFE2Ko1-ik"
+    }
 ]
 
 
@@ -49,7 +55,7 @@ const CarouselItem = ({ index, carouselLength, title, picture, description, link
     return (
         <div id={`slide${index}`} className="carousel-item relative w-full justify-center">
             <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img src={picture} /></figure>
+                <figure className="h-[150px]"><img src={picture} /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{title}</h2>
                     <p>{description}</p>
@@ -58,8 +64,6 @@ const CarouselItem = ({ index, carouselLength, title, picture, description, link
                     </div>
                 </div>
             </div>                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href={`#slide${prevIndex(index, carouselLength)}`} className="btn btn-circle">❮</a>
-                <a href={`#slide${nextIndex(index, carouselLength)}`} className="btn btn-circle">❯</a>
             </div>
         </div>
     )
@@ -94,7 +98,7 @@ export default function Portfolio() {
 
 
 
-        <div>
+        <div className="p-10 g-3">
             <Header />
 
 
@@ -104,7 +108,8 @@ export default function Portfolio() {
 
                 {/* Question: how do I add a variable (srcArray) to the carousel div that the carouselItem inherits  */}
 
-                <div className="carousel w-1/2" >
+                {/* <div className="carousel w-1/2" > */}
+                <div className="" >
 
                     {projects.map(mapProjectToCarouselItem)}
 
