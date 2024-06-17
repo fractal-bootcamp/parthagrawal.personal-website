@@ -47,13 +47,6 @@ export default function Index() {
       <About />
 
 
-
-
-
-
-
-
-
     </div>
   );
 }
