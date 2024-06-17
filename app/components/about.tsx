@@ -1,8 +1,11 @@
 import { Header } from "~/components/header"
+import { MyComponent } from "./framer"
 
 export default function About() {
     return (
         <div className="">
+            <MyComponent />
+
 
 
             <p>
