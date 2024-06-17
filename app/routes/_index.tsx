@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import About from "~/components/about";
 import { Header } from "~/components/header";
 
 
@@ -33,9 +34,11 @@ export const meta: MetaFunction = () => {
 // )
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <div className="p-10 g-3" style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
 
       <Header />
+
+      <About />
 
 
     </div>
